@@ -8,7 +8,7 @@
   >
     <div
       v-if="showShop"
-      class="w-screen h-screen flex flex-col justify-start gap-y-4 overflow-scroll z-40 absolute top-0 bg-white rounded-br-xl rounded-bl-xl"
+      class="w-screen h-screen test mb-4 flex flex-col justify-start gap-y-4 overflow-scroll z-40 absolute top-0 bg-white rounded-bl-3xl rounded-br-3xl"
     >
       <div
         class="flex flex-col px-4 py-2 gap-y-10 items-center justify-center w-full bg-blue-800 rounded-br-xl rounded-bl-xl"
@@ -27,7 +27,7 @@
         </button>
       </div>
       <ul>
-        <li v-for="i in 6" class="my-8 mx-4" :key="i"><y-product-card /></li>
+        <li v-for="i in 5" class="my-8 mx-4" :key="i"><y-product-card /></li>
       </ul>
     </div>
   </div>
@@ -49,4 +49,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.test {
+  height: 85% !important;
+}
+</style>
