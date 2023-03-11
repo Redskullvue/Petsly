@@ -5,7 +5,7 @@
       <y-shop-list :showShop="showShop" @closeShop="shopListToggle" />
     </div>
     <div class="w-screen h-screen">
-      <y-map @shopToggle="shopListToggle" />
+      <y-map @shopToggle="shopListToggle" class="p-2" />
     </div>
   </div>
 </template>
