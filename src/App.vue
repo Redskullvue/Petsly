@@ -4,8 +4,8 @@
       <y-header />
       <y-shop-list :showShop="showShop" @closeShop="shopListToggle" />
     </div>
-    <div class="w-screen h-screen">
-      <y-map @shopToggle="shopListToggle" class="p-2" />
+    <div class="w-screen h-screen p-2">
+      <y-map @shopToggle="shopListToggle" />
     </div>
   </div>
 </template>
