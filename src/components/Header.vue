@@ -15,10 +15,8 @@
       />
     </div>
   </div>
-  <div>
-    <!-- The Close button is inside the side bar so its emitting and come back here to get processed -->
-    <y-sideBar :status="isOpen" @closeSideBar="checkStatus" />
-  </div>
+  <!-- The Close button is inside the side bar so its emitting and come back here to get processed -->
+  <y-sideBar :status="isOpen" @closeSideBar="checkStatus" />
 </template>
 
 <script>
