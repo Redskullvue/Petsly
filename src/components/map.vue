@@ -5,24 +5,20 @@
     :center="[51.361654, 35.755671]"
     @click="shopToggle"
   >
-    <button
-      class="z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10"
-    >
+    <div>
       <mgl-marker
         :coordinates="[51.361654, 35.755671]"
         color="#FFB6C1"
         :scale="1.5"
-        :clickTolerance="50"
       >
       </mgl-marker>
-    </button>
-    <div class="bg-blue-500 font-bold text-2xl z-50">Test</div>
+    </div>
     <button class="absolute bottom-16 right-4 bg-white rounded-2xl p-4">
       <i-gps />
     </button>
     <div
       v-if="!hasError"
-      class="z-20 absolute bottom-6 left-4 rounded-xl p-2 bg-white"
+      class="z-10 absolute bottom-6 left-4 rounded-xl p-2 bg-white"
     >
       <i-location />
     </div>
@@ -58,6 +54,7 @@ export default {
     };
   },
   created() {
+    // This is a Request for the current address Unfortunetly the api dosent support FA
     axios
       .get(
         "https://api.maptiler.com/geocoding/51.361654,35.755671.json?key=Hy2cvl9hYfTfrPh40tyk"
@@ -71,16 +68,17 @@ export default {
       });
   },
   methods: {
+    //This is to check if the shop list should be open or not
     shopToggle() {
       this.shopOpen = !this.shopOpen;
       this.$emit("shopToggle", this.shopOpen);
-      console.log(document.getElementById("marker"));
     },
   },
 };
 </script>
 
 <style lang="scss">
+// MapLibre Styles are lkoaded by SASS so we added this sass file here
 @import "~vue-maplibre-gl/src/css/maplibre.scss";
 .marker {
   background-image: url("../assets/images/Petshop.png");
