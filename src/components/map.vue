@@ -80,7 +80,4 @@ export default {
 <style lang="scss">
 // MapLibre Styles are lkoaded by SASS so we added this sass file here
 @import "~vue-maplibre-gl/src/css/maplibre.scss";
-.marker {
-  background-image: url("../assets/images/Petshop.png");
-}
 </style>
