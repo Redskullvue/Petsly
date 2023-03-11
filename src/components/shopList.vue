@@ -4,11 +4,11 @@
       'h-screen': showShop,
       'translate-y-full': !showShop,
     }"
-    class="transition-all ease-in-out duration-200 z-50"
+    class="transition-all ease-in-out duration-300 z-50"
   >
     <div
       v-if="showShop"
-      class="w-screen h-screen test mb-4 flex flex-col justify-start gap-y-4 overflow-scroll z-40 absolute top-0 bg-white rounded-bl-3xl rounded-br-3xl"
+      class="w-screen custom-height mb-4 flex flex-col justify-start gap-y-4 overflow-scroll z-40 absolute top-0 bg-white rounded-bl-3xl rounded-br-3xl"
     >
       <div
         class="flex flex-col px-4 py-2 gap-y-10 items-center justify-center w-full bg-blue-800 rounded-br-xl rounded-bl-xl"
@@ -49,8 +49,8 @@ export default {
 };
 </script>
 
-<style>
-.test {
+<style scoped>
+.custom-height {
   height: 85% !important;
 }
 </style>
